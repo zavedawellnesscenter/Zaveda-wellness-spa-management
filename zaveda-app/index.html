@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zaveda-app</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  
+    <script>
+      window.addEventListener('error', (event) => {
+          alert('Zaveda error: ' + event.message)
+            })
+              window.addEventListener('unhandledrejection', (event) => {
+                  alert('Zaveda error: ' + event.reason)
+                    })
+                    </script>
+                    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
