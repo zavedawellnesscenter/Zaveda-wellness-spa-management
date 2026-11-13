@@ -156,7 +156,7 @@ const handleAddBooking = async () => {
             const { data: selectedService, error: serviceError } = await supabase
               .from('services')
                 .select('id, price')
-                  .eq('service_name', service)
+                  .ilike('service_name', service.trim())
                     .maybeSingle()
 
                     if (serviceError || !selectedService) {
